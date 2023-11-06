@@ -32,7 +32,6 @@ function fibsRec(n) {
 
 /* don't worry about this, it handles the parameters given through the terminal */
 let args = process.argv.slice(2);
-for (const argKey in args) {
-  const arg = args[argKey];
+args.forEach((arg) => {
   console.log(`${arg}: ${fibsRec(+arg)}`);
-}
+});
